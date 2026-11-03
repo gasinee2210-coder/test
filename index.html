@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My History - อะตอม</title>
+    <title>My History - Atom</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,500;0,700;1,700&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -17,84 +17,135 @@
 
         body {
             font-family: 'Kanit', sans-serif;
-            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            background: #0f172a;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.15) 0px, transparent 50%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            color: #f8fafc;
         }
 
         .card {
-            background: #ffffff;
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             text-align: center;
-            max-width: 400px;
+            max-width: 380px;
             width: 100%;
-            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(56, 189, 248, 0.2);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 24px auto;
         }
 
         .avatar {
-            width: 100px;
-            height: 100px;
-            background: #4a90e2;
-            color: white;
-            font-size: 40px;
-            font-weight: 600;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
+            color: #ffffff;
+            font-size: 42px;
+            font-weight: 700;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px auto;
-            box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .greeting {
-            font-size: 1.5rem;
-            color: #333;
-            margin-bottom: 10px;
-            font-weight: 600;
+            font-size: 1.6rem;
+            color: #f8fafc;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
         .info {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: #94a3b8;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-weight: 300;
         }
 
         .highlight {
-            color: #4a90e2;
+            color: #38bdf8;
             font-weight: 600;
+            text-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
         }
 
         .badge {
-            display: inline-block;
-            background: #eef5ff;
-            color: #4a90e2;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 400;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: #38bdf8;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #38bdf8;
         }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <div class="avatar">อ</div>
-        <p class="greeting">สวัสดีครับ 👋</p>
+        <div class="avatar-container">
+            <div class="avatar">อ</div>
+        </div>
+        
+        <p class="greeting">HELLO WORLD⚡</p>
+        
         <p class="info">
             ผมชื่อ <span class="highlight">ธนาธนวัฒน์ ชื่นชม</span><br>
             ชื่อเล่น <span class="highlight">อะตอม</span>
         </p>
-        <span class="badge">Welcome to my page</span>
+
+        <span class="badge">Developer Profile</span>
     </div>
 
 </body>
