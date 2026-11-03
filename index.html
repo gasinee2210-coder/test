@@ -3,10 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my history</title>
+    <title>My History - อะตอม</title>
+    <!-- โหลดฟอนต์สวยๆ จาก Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background: #4a90e2;
+            color: white;
+            font-size: 40px;
+            font-weight: 600;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+        }
+
+        .greeting {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .info {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #4a90e2;
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #eef5ff;
+            color: #4a90e2;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+    </style>
 </head>
 <body>
-    <p>สวัสดีครับ</p>
-    <p>ผมชื่อ ธนาธนวัฒน์ ชื่นชม ชื่อเล่น อะตอม</p>
+
+    <div class="card">
+        <!-- รูปโปรไฟล์เริ่มต้นเป็นอักษรแรกของชื่อ -->
+        <div class="avatar">อ</div>
+        
+        <p class="greeting">สวัสดีครับ 👋</p>
+        
+        <p class="info">
+            ผมชื่อ <span class="highlight">ธนาธนวัฒน์ ชื่นชม</span><br>
+            ชื่อเล่น <span class="highlight">อะตอม</span>
+        </p>
+
+        <span class="badge">Welcome to my page</span>
+    </div>
+
 </body>
 </html>
